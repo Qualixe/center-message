@@ -277,14 +277,16 @@ sections.forEach((section) => {
   if (btn && x) {
     btn.addEventListener("click", toggleVideo);
     function toggleVideo() {
+      let playIcon = btn.querySelector(".play-icon");
+      let pauseIcon = btn.querySelector(".pause-icon");
       if (x.paused) {
         x.play();
-        // btn.innerHTML = "pause";
-        // btn.classList.add("active");
+        playIcon.style.display = "none";
+        pauseIcon.style.display = "block";
       } else {
         x.pause();
-        // btn.innerHTML = "Play";
-        // btn.classList.remove("active");
+        playIcon.style.display = "block";
+        pauseIcon.style.display = "none";
       }
     }
   }

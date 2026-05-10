@@ -161,6 +161,10 @@
 .testimonial-overlay .video-play-btn .icon{
     display: flex;
 }
+
+.testimonial-overlay .video-play-btn .icon .pause-icon{
+    display: none;
+}
 /* testimonial-bg-item css end */
 /* testimonial-section css end */
 
