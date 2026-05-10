@@ -152,10 +152,41 @@ p {
     max-width: 1384px;
     padding: 0 20px;
     margin: 0 auto;
+    position: relative;
+}
+
+.container::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 4000%;
+    background: var(--border-color);
+    z-index: 99;
+}
+
+.container::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 4000%;
+    background: var(--border-color);
+    z-index: 99;
 }
 
 .section {
     padding: 60px 0;
+}
+
+
+section,
+.section {
+    overflow: hidden;
 }
 
 .pt-0 {

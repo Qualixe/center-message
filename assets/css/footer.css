@@ -2,6 +2,7 @@
 .footer-section {
     background-color: var(--brand-color);
     padding: 48px 0;
+    overflow: hidden;
 }
 
 .footer-items {
@@ -63,6 +64,10 @@
     text-transform: capitalize;
     color: var(--item-bg2);
     font-weight: 300;
+}
+
+.footer-list li a.email {
+    text-decoration: underline;
 }
 
 .footer-list li a:hover {
