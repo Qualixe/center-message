@@ -14,8 +14,21 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 48px;
-    max-width: 1008px;
+    max-width: 1048px;
     margin: 0 auto;
+    position: relative;
+}
+
+.grid-info-card-items::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1px;
+    width: 100%;
+    background: var(--border-color);
+    z-index: -1;
 }
 
 .grid-info-card-item {
@@ -90,6 +103,7 @@
     opacity: 1;
     visibility: visible;
 }
+
 /* grid-info-card-section css end */
 
 @media only screen and (max-width:992px) {
@@ -124,6 +138,10 @@
     .grid-info-card-items {
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
+    }
+
+    .grid-info-card-items::before {
+        display: none;
     }
 
     .grid-info-card-item .content .title {

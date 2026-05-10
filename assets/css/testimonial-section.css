@@ -140,17 +140,26 @@
 }
 
 .testimonial-overlay .video-play-btn {
-    position: relative;
-    box-sizing: content-box;
-    display: block;
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    padding: 9px 10px 9px 15px;
     transition: all ease .3s;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--item-bg3);
+}
+
+.testimonial-overlay .video-play-btn:hover {
+    background: var(--btn-hover2);
+}
+
+.testimonial-overlay .video-play-btn.active {
+    background: var(--btn-hover2);
+}
+
+.testimonial-overlay .video-play-btn .icon{
+    display: flex;
 }
 /* testimonial-bg-item css end */
 /* testimonial-section css end */

@@ -257,15 +257,38 @@ $(document).ready(function () {
 // let x = document.getElementById("myVideo");
 
 // play_btn.addEventListener("click", toggleVideo);
+
 // function toggleVideo() {
 //   if (x.paused) {
 //     x.play();
-//     play_btn.innerHTML = "pause";
+//     play_btn.classList.add("active");
 //   } else {
 //     x.pause();
-//     play_btn.innerHTML = "Play";
+//     play_btn.classList.remove("active");
 //   }
 // }
+
+// testimonial-video-play-function
+const sections = document.querySelectorAll(".testimonial-item");
+
+sections.forEach((section) => {
+  let x = section.querySelector(".testimonial-video");
+  let btn = section.querySelector(".video-play-btn");
+  if (btn && x) {
+    btn.addEventListener("click", toggleVideo);
+    function toggleVideo() {
+      if (x.paused) {
+        x.play();
+        // btn.innerHTML = "pause";
+        // btn.classList.add("active");
+      } else {
+        x.pause();
+        // btn.innerHTML = "Play";
+        // btn.classList.remove("active");
+      }
+    }
+  }
+});
 
 // testimonial-slider js start--
 const testimonialSlider = new Swiper(".testimonial-slider", {

@@ -59,7 +59,7 @@
 .newsletter-field input {
     border: none;
     padding: 0;
-    max-width: 240px;
+    max-width: 320px;
     height: 43px;
     color: var(--border-color);
     text-transform: lowercase;
@@ -138,6 +138,19 @@
     .newsletter-content .title {
         font-size: 36px;
     }
+    /* newsletter-section css end */
+}
+
+@media only screen and (max-width: 767px) {
+
+    /* newsletter-section css start */
+    .newsletter-checkbox {
+        margin: 16px 16px 0;
+    }
+
+    .newsletter-field {
+        margin: 16px 16px 0;
+    }
 
     /* newsletter-section css end */
 }
@@ -154,7 +167,6 @@
     }
 
     .newsletter-field {
-        margin: 16px 16px 0;
         padding: 10px;
         gap: 10px;
         max-width: 100%;
@@ -183,7 +195,6 @@
     }
 
     .newsletter-checkbox {
-        margin: 16px 16px 0;
         max-width: 100%;
     }
 
