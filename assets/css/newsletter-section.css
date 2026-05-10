@@ -70,7 +70,7 @@
 
 .newsletter-field input::placeholder {
     color: var(--border-color);
-    text-transform: lowercase;
+    text-transform: capitalize;
 }
 
 .newsletter-checkbox {
@@ -97,6 +97,7 @@
     user-select: none;
     display: flex;
     align-items: center;
+    width: fit-content;
 }
 
 .newsletter-checkbox label:before {

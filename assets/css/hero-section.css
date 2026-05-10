@@ -7,6 +7,10 @@
     background-color: var(--item-bg2);
 }
 
+/* .hero-slider-section.green{
+    background-color: var(--brand-color);
+} */
+
 .hero-content-inner {
     display: flex;
     justify-content: center;
@@ -22,6 +26,10 @@
     flex-direction: column;
     gap: 96px;
 }
+
+/* .hero-regular-content{
+
+} */
 
 .hero-content .title {
     font-size: 96px;
