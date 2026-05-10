@@ -1,0 +1,138 @@
+/* grid-info-card-section css start */
+.grid-info-card-heading {
+    max-width: 544px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.grid-info-card-heading .title {
+    font-size: 64px;
+    line-height: 100%;
+}
+
+.grid-info-card-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+    max-width: 1008px;
+    margin: 0 auto;
+}
+
+.grid-info-card-item {
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.grid-info-card-item .content {
+    padding: 32px 24px 24px;
+    text-align: center;
+    background: var(--item-bg5);
+    border-bottom: 1px solid var(--border-color);
+    height: 100%;
+    transition: all ease .3s;
+}
+
+.grid-info-card-item:hover .content {
+    background: var(--brand-color);
+    border-color: var(--brand-color);
+}
+
+.grid-info-card-item .content .title {
+    font-size: 24px;
+    line-height: 100%;
+    font-weight: 700;
+    font-family: var(--paragraph-font);
+    transition: all ease .3s;
+}
+
+.grid-info-card-item:hover .content .title {
+    color: var(--item-bg5);
+}
+
+.grid-info-card-item .content .text {
+    font-size: 14px;
+    line-height: 144%;
+    text-align: center;
+    max-width: 383px;
+    margin: 16px auto 0;
+    transition: all ease .3s;
+}
+
+.grid-info-card-item:hover .content .text {
+    color: var(--item-bg5);
+}
+
+.grid-info-card-item .img {
+    position: relative;
+}
+
+.grid-info-card-item .img .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(43, 56, 37, 0) 50%, #2B3825 100%);
+    padding: 32px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease .3s;
+}
+
+.grid-info-card-item:hover .img .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+/* grid-info-card-section css end */
+
+@media only screen and (max-width:992px) {
+
+    /* grid-info-card-section css start */
+    .grid-info-card-heading {
+        margin: 0 auto 40px;
+    }
+
+    .grid-info-card-heading .title {
+        font-size: 44px;
+    }
+
+    .grid-info-card-items {
+        gap: 24px;
+    }
+
+    /* grid-info-card-section css end */
+}
+
+@media only screen and (max-width:575px) {
+
+    /* grid-info-card-section css start */
+    .grid-info-card-heading {
+        margin: 0 auto 20px;
+    }
+
+    .grid-info-card-heading .title {
+        font-size: 28px;
+    }
+
+    .grid-info-card-items {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .grid-info-card-item .content .title {
+        font-size: 20px;
+    }
+
+    .grid-info-card-item .content .text {
+        margin: 10px auto 0;
+    }
+
+    /* grid-info-card-section css end */
+}

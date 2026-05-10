@@ -1,0 +1,99 @@
+/* icon-item-section css start */
+.icon-items {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto 1fr;
+    align-items: center;
+}
+
+.icon-item {
+    padding: 16px 24px;
+    background: var(--item-bg5);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.icon-item .icon {
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    background: var(--item-bg3);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-item .content .title {
+    font-size: 16px;
+    line-height: 100%;
+    font-family: var(--paragraph-font);
+}
+
+.icon-items .line {
+    width: 24px;
+    height: 1px;
+    background: var(--border-color);
+    display: block;
+}
+
+/* icon-item-section css end */
+
+@media only screen and (max-width:1200px) {
+
+    /* icon-item-section css start */
+    .icon-items {
+        display: flex;
+    }
+
+    .icon-item {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .icon-item .content .title {
+        line-height: 133%;
+    }
+
+    /* icon-item-section css end */
+}
+
+@media only screen and (max-width:767px) {
+
+    /* icon-item-section css start */
+    .icon-items {
+        flex-direction: column;
+    }
+
+    /* icon-item-section css end */
+}
+
+@media only screen and (max-width:767px) {
+
+    /* icon-item-section css start */
+    .icon-item {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .icon-item .icon {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+    }
+
+    .icon-item .icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .icon-items .line {
+        width: 1px;
+        height: 20px;
+    }
+
+    /* icon-item-section css end */
+}

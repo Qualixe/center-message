@@ -1,0 +1,139 @@
+/* number-item-section css start */
+
+.number-item-text-area {
+    max-width: 840px;
+    margin: 72px auto;
+    text-align: center;
+}
+
+.number-item-text-area .content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.number-item-text-area .content p {
+    font-size: 24px;
+    line-height: 100%;
+}
+
+.number-item-text-mark {
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--item-bg);
+    margin: 16px 0 0 0;
+}
+
+.number-item-text-mark a {
+    color: var(--item-bg);
+    text-decoration: underline;
+}
+
+.number-items {
+    display: flex;
+    flex-direction: column;
+    max-width: 1046px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.number-item {
+    padding: 16px 24px;
+    background: var(--item-bg5);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.number-items .line {
+    width: 1px;
+    height: 27px;
+    background: var(--border-color);
+    display: block;
+}
+
+.number-item .number {
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    background: var(--item-bg3);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Instrument Serif;
+    font-weight: 400;
+    color: var(--heading-text-color);
+    font-size: 24px;
+    line-height: 100%;
+}
+
+.number-item .content .title {
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 700;
+    font-family: var(--paragraph-font);
+}
+
+.number-item .content .text {
+    font-size: 14px;
+    line-height: 143%;
+    margin: 4px 0 0 0;
+}
+
+.number-item-section-wrap .section-btn {
+    margin: 0;
+}
+
+/* number-item-section css end */
+
+@media only screen and (max-width: 575px) {
+
+    /* number-item-section css start */
+    .number-item-text-area {
+        margin: 40px auto 20px;
+    }
+
+    .number-item-text-area .content p {
+        font-size: 18px;
+    }
+
+    .number-item-text-mark {
+        margin: 10px 0 0 0;
+    }
+
+    .number-item {
+        padding: 10px;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .number-item .number {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .number-item .content {
+        text-align: center;
+    }
+
+    .number-item .content .text {
+        font-size: 12px;
+        margin: 8px 0 0 0;
+    }
+
+    .number-items .line {
+        height: 20px;
+    }
+
+    /* number-item-section css end */
+}
