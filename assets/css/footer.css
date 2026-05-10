@@ -29,6 +29,7 @@
 
 .footer-content-text {
     color: var(--item-bg2);
+    font-weight: 300;
 }
 
 .footer-item-title {
