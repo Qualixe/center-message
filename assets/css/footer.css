@@ -62,7 +62,7 @@
     line-height: 21px;
     text-transform: capitalize;
     color: var(--item-bg2);
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .footer-list li a:hover {
@@ -85,6 +85,7 @@
     color: var(--item-bg2);
     font-size: 16px;
     line-height: 21px;
+    font-weight: 300;
 }
 
 .price-select-field {
