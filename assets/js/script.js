@@ -101,10 +101,23 @@ $(document).ready(function () {
   // hero-animation js start---
   $(".hero-animation-btn").click(function (event) {
     event.stopPropagation();
-    $(this).removeClass("active");
+    $(".hero-animation-btn").removeClass("active");
     $("body").removeClass("active");
     $(".navbar").removeClass("green");
+    $(".navbar").removeClass("hover-green");
     $(".hero-slider-section").removeClass("green");
+  });
+
+  $(".navbar.hover-green .navbar-link").mouseenter(function (event) {
+    event.stopPropagation();
+    $(".navbar").removeClass("green");
+  });
+
+  $(".navbar .navbar-link").mouseleave(function (event) {
+    if ($(".navbar").hasClass("hover-green")) {
+      event.stopPropagation();
+      $(".navbar").addClass("green");
+    }
   });
   // hero-animation js end---
 

@@ -159,13 +159,14 @@
     background: var(--btn-hover2);
 }
 
-.testimonial-overlay .video-play-btn .icon{
+.testimonial-overlay .video-play-btn .icon {
     display: flex;
 }
 
-.testimonial-overlay .video-play-btn .icon .pause-icon{
+.testimonial-overlay .video-play-btn .icon .pause-icon {
     display: none;
 }
+
 /* testimonial-bg-item css end */
 /* testimonial-section css end */
 
@@ -255,23 +256,10 @@
     .testimonial-overlay .video-play-btn {
         width: 36px;
         height: 36px;
-        padding: 9px 10px 9px 10px;
     }
 
-    .testimonial-overlay .video-play-btn::before {
-        width: 36px;
-        height: 36px;
-    }
-
-    .testimonial-overlay .video-play-btn span {
-        border-left: 9px solid var(--brand-color);
-        border-top: 6px solid transparent;
-        border-bottom: 6px solid transparent;
-    }
-
-    .testimonial-overlay .video-play-btn::after {
-        width: 36px;
-        height: 36px;
+    .testimonial-overlay .video-play-btn .icon .play-icon {
+        width: 10px;
     }
 
     /* testimonial-section css end */
