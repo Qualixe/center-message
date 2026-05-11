@@ -98,27 +98,13 @@ $(document).ready(function () {
 
   // navbar js end ---
 
-  // --slide-tab js start--
-  // $(".slide-tab-btn").click(function () {
-  //   $(this).parent().siblings(".tab-nav-item").removeClass("active");
-  //   $(this).parent().addClass("active");
-  //   $(".slide-tab-content-item").hide();
-  //   var activeTab = $(this).attr("href");
-  //   $(activeTab).fadeIn();
-  //   return false;
-  // });
-  // --slide-tab js end--
-
-  // --grid-tab js start--
-  $(".grid-tab-btn").click(function () {
-    $(this).parent().siblings(".tab-nav-item").removeClass("active");
-    $(this).parent().addClass("active");
-    $(".grid-tab-content-item").hide();
-    var activeTab = $(this).attr("href");
-    $(activeTab).fadeIn();
-    return false;
+  // hero-animation js start---
+  $(".hero-slider-section").click(function (event) {
+    event.stopPropagation();
+    $(this).removeClass("green");
+    $(".navbar").removeClass("green");
   });
-  // --grid-tab js end--
+  // hero-animation js end---
 
   // video review popup js start---
   $(".video-review-content").click(function (event) {
@@ -131,143 +117,7 @@ $(document).ready(function () {
     $(".video-review-popup").removeClass("active");
   });
   // video review popup js end---
-
-  // size-chart-sidebar js start---
-  $(".size-sidebar-btn").click(function (event) {
-    event.stopPropagation();
-    $(".size-chart-sidebar").addClass("active");
-    $(".size-chart-sidebar-inner").addClass("active");
-    $("body").addClass("active");
-  });
-
-  $(".size-chart-sidebar-close-window-btn").click(function (event) {
-    event.stopPropagation();
-    $(".size-chart-sidebar").removeClass("active");
-    $(".size-chart-sidebar-inner").removeClass("active");
-    $("body").removeClass("active");
-  });
-
-  $(".size-chart-close-btn").click(function (event) {
-    event.stopPropagation();
-    $(".size-chart-sidebar").removeClass("active");
-    $(".size-chart-sidebar-inner").removeClass("active");
-    $("body").removeClass("active");
-  });
-  // size-chart-sidebar js end---
-
-  // cart-sidebar js start---
-  $(".side-cart-btn").click(function (event) {
-    event.stopPropagation();
-    $(".cart-sidebar").addClass("active");
-    $("body").addClass("active");
-  });
-
-  $(".cart-sidebar-close-window-btn").click(function (event) {
-    event.stopPropagation();
-    $(".cart-sidebar").removeClass("active");
-    $("body").removeClass("active");
-  });
-
-  $(".side-cart-close-btn").click(function (event) {
-    event.stopPropagation();
-    $(".cart-sidebar").removeClass("active");
-    $("body").removeClass("active");
-  });
-  // cart-sidebar js end---
-
-  // collection filter sidebar js start--
-  $(".filter-open-btn").click(function (event) {
-    event.stopPropagation();
-    $(".collection-filter").addClass("active");
-    $("body").addClass("active");
-  });
-
-  $(".filter-window-close-btn").click(function (event) {
-    event.stopPropagation();
-    $(".collection-filter").removeClass("active");
-    $("body").removeClass("active");
-  });
-
-  $(".filter-close-btn").click(function (event) {
-    event.stopPropagation();
-    $(".collection-filter").removeClass("active");
-    $("body").removeClass("active");
-  });
-  // collection filter sidebar js end--
-
-  // **..collection filter-accordion js start..**
-  $(".accordion-toggle-btn").on("click", function () {
-    $(this).next().slideToggle();
-    $(this).parent().toggleClass("active");
-  });
-  // **..collection filter-accordion js end..**
-
-  // **..product-accordion js start..**
-  $(".product-accordion-toggle-btn").on("click", function () {
-    $(this).next().slideToggle();
-    $(this).parent().toggleClass("active");
-    $(this)
-      .parent()
-      .siblings()
-      .removeClass("active")
-      .find(".product-accordion-item-content")
-      .slideUp();
-  });
-  // **..product-accordion js end..**
-
-  // sticky-add-to-cart-section js start--
-  $(window).on("load scroll", function () {
-    var scrolling = $(this).scrollTop();
-    if (scrolling > 1100) {
-      $(".sticky-add-to-cart-section").addClass("fixed");
-    } else {
-      $(".sticky-add-to-cart-section").removeClass("fixed");
-    }
-  });
-  // sticky-add-to-cart-section js end--
-
-  // **..faq-accordion js start..**
-  // $(".faq-accordion-toggle-btn").on("mouseenter", function () {
-  //   $(this).children(".faq-link-wrap-item-content").slideDown();
-  //   $(this).addClass("active");
-  //   $(this).siblings().removeClass("active").find(".faq-link-wrap-item-content").slideUp();
-  // });
-
-  // $(".faq-accordion-toggle-btn").on("mouseleave", function () {
-  //   $(this).children(".faq-link-wrap-item-content").slideUp();
-  //   $(this).removeClass("active");
-  //   $(this).siblings().removeClass("active").find(".faq-link-wrap-item-content").slideUp();
-  // });
-
-  // $(document).ready(function () {
-  //   $(".faq-accordion-toggle-btn").hover(function () {
-  //     $(this).children(".faq-link-wrap-item-content").slideDown();
-  //     $(this).addClass("active");
-  //     $(this).siblings().removeClass("active").find(".faq-link-wrap-item-content").slideUp();
-  //   });
-  //   $(".faq-accordion-toggle-btn").mouseleave(function () {
-  //     $(this).children(".faq-link-wrap-item-content").slideUp();
-  //     $(this).removeClass("active");
-  //   });
-  // });
-  // **..faq-accordion js end..**
 });
-
-// let play_btn = document.getElementById("play_btn");
-// let x = document.getElementById("myVideo");
-
-// play_btn.addEventListener("click", toggleVideo);
-
-// function toggleVideo() {
-//   if (x.paused) {
-//     x.play();
-//     play_btn.classList.add("active");
-//   } else {
-//     x.pause();
-//     play_btn.classList.remove("active");
-//   }
-// }
-
 // testimonial-video-play-function
 const sections = document.querySelectorAll(".testimonial-item");
 
@@ -326,7 +176,7 @@ const testimonialSlider = new Swiper(".testimonial-slider", {
   },
 });
 
-// Pause on hover
+// Pause on hover testimonial slider js
 const marqueeTestimonial = document.querySelector(".testimonial-slider");
 
 marqueeTestimonial.addEventListener("mouseenter", () => {
@@ -338,210 +188,18 @@ marqueeTestimonial.addEventListener("mouseleave", () => {
 });
 // testimonial-slider js end--
 
-// collection-tab-slide js start--
-var swiper = new Swiper(".collection-tab-slide", {
-  slidesPerView: 4,
-  spaceBetween: 20,
-  grabCursor: true,
-  loop: false,
-  navigation: {
-    nextEl: ".collection-tab-slide-button-next",
-    prevEl: ".collection-tab-slide-button-prev",
-  },
-  breakpoints: {
-    // when window width is >= 1px
-    1: {
-      spaceBetween: 10,
-      slidesPerView: 1.7,
-    },
-    // when window width is >= 430px
-    576: {
-      spaceBetween: 20,
-      slidesPerView: 2.3,
-    },
-    // when window width is >= 767px
-    768: {
-      spaceBetween: 20,
-      slidesPerView: 3.2,
-    },
-    // when window width is >= 767px
-    993: {
-      spaceBetween: 20,
-      slidesPerView: 4,
-    },
-  },
+// newsletter type js start---
+let newsletterField = document.querySelectorAll(".newsletter-field");
+newsletterField.forEach((section) => {
+  let newsletter_input = section.querySelector(".newsletter_input");
+  const news_submit_btn = section.querySelector(".news_submit_btn");
+
+  newsletter_input?.addEventListener("keyup", () => {
+    if (newsletter_input.value.length > 0) {
+      news_submit_btn.disabled = false;
+    } else {
+      news_submit_btn.disabled = true;
+    }
+  });
 });
-// collection-tab-slide js end--
-
-// card-slider js start--
-var swiper = new Swiper(".card-slider", {
-  slidesPerView: 4,
-  spaceBetween: 20,
-  grabCursor: true,
-  loop: false,
-  navigation: {
-    nextEl: ".card-slider-button-next",
-    prevEl: ".card-slider-button-prev",
-  },
-  breakpoints: {
-    // when window width is >= 1px
-    1: {
-      spaceBetween: 10,
-      slidesPerView: 1.7,
-    },
-    // when window width is >= 430px
-    576: {
-      spaceBetween: 20,
-      slidesPerView: 2.3,
-    },
-    // when window width is >= 767px
-    768: {
-      spaceBetween: 20,
-      slidesPerView: 3.2,
-    },
-    // when window width is >= 767px
-    993: {
-      spaceBetween: 20,
-      slidesPerView: 4,
-    },
-  },
-});
-// card-slider js end--
-
-// video-review-slider js start--
-var video_review_slider = new Swiper(".video-review-slider", {
-  loop: true,
-  speed: 500,
-  autoplay: {
-    delay: 2000,
-  },
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 80,
-    depth: 200,
-    modifier: 1,
-    slideShadows: false,
-  },
-});
-// video-review-slider js end--
-
-// related-product-slider js start--
-var swiper = new Swiper(".related-product-slider", {
-  slidesPerView: 4,
-  spaceBetween: 20,
-  grabCursor: true,
-  loop: false,
-  navigation: {
-    nextEl: ".related-product-slider-btn-next",
-    prevEl: ".related-product-slider-btn-prev",
-  },
-  breakpoints: {
-    // when window width is >= 1px
-    1: {
-      spaceBetween: 10,
-      slidesPerView: 1.7,
-    },
-    // when window width is >= 430px
-    576: {
-      spaceBetween: 20,
-      slidesPerView: 2.3,
-    },
-    // when window width is >= 767px
-    768: {
-      spaceBetween: 20,
-      slidesPerView: 3.2,
-    },
-    // when window width is >= 767px
-    993: {
-      spaceBetween: 20,
-      slidesPerView: 4,
-    },
-  },
-});
-// related-product-slider js end--
-
-// side-cart-slider js start--
-var swiper = new Swiper(".side-cart-slider", {
-  slidesPerView: 2.2,
-  spaceBetween: 10,
-  grabCursor: true,
-  loop: false,
-  speed: 1000,
-});
-// side-cart-slider js end--
-
-// product-slider js start---
-var swiper = new Swiper(".product-slider", {
-  loop: true,
-  autoHeight: true,
-  spaceBetween: 0,
-  speed: 800,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".product-slider-btn-next",
-    prevEl: ".product-slider-btn-prev",
-  },
-});
-// product-slider js end---
-
-// product-slider js start---
-// var swiper = new Swiper(".product-slider-thumb", {
-//   direction: "vertical",
-//   loop: true,
-//   spaceBetween: 20,
-//   slidesPerView: 5,
-//   freeMode: true,
-//   mousewheel: true,
-//   breakpoints: {
-//     // when window width is >= 320px
-//     1: {
-//       direction: "horizontal",
-//       spaceBetween: 10,
-//       slidesPerView: 4,
-//     },
-//     // when window width is >= 576px
-//     576: {
-//       direction: "horizontal",
-//       spaceBetween: 20,
-//       slidesPerView: 5,
-//     },
-//     // when window width is >= 767px
-//     768: {
-//       direction: "vertical",
-//       spaceBetween: 20,
-//       slidesPerView: 5,
-//     },
-//     // when window width is >= 767px
-//     993: {
-//       direction: "vertical",
-//     },
-//   },
-// });
-// var swiper2 = new Swiper(".product-slider", {
-//   loop: true,
-//   autoHeight: true,
-//   spaceBetween: 10,
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-//   thumbs: {
-//     swiper: swiper,
-//   },
-// });
-// product-slider js end---
-
-// progesss-bar js start--
-// const progress = document.querySelector(".progress");
-// progress.addEventListener("input", function () {
-//   const value = this.value;
-//   this.style.background = `linear-gradient(to right,rgb(133 168 104) 0%,rgb(133 168 104) ${value}%,rgb(216, 216, 216) ${value}%)`;
-// });
-// progesss-bar js end--
+// newsletter type js end---

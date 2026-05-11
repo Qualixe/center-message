@@ -5,11 +5,28 @@
     top: 0;
     left: 0;
     right: 0;
-    transition: ease .3s;
+    transition: ease 2s;
     width: 100%;
     z-index: 999;
     border-bottom: 1px solid var(--border-color);
     height: 96px;
+}
+
+.navbar.green {
+    background: var(--brand-color);
+    transition: all ease .3s;
+}
+
+.navbar.green:hover {
+    background: var(--item-bg5);
+}
+
+.navbar.green .navbar-link-title {
+    color: var(--item-bg2);
+}
+
+.navbar.green:hover .navbar-link-title {
+    color: var(--item-bg);
 }
 
 .navbar.nav-fixed {
@@ -89,9 +106,30 @@
     height: 100%;
 }
 
-
+.navbar-brand2,
 .navbar-brand {
     height: 100%;
+    transition: all ease .3s;
+}
+
+.navbar-brand2 {
+    display: none;
+}
+
+.navbar.green .navbar-brand2 {
+    display: block;
+}
+
+.navbar.green .navbar-brand {
+    display: none;
+}
+
+.navbar.green:hover .navbar-brand2 {
+    display: none;
+}
+
+.navbar.green:hover .navbar-brand {
+    display: block;
 }
 
 .navbar-logo {
@@ -209,6 +247,22 @@
 .navbar-icons li a svg {
     width: 24px;
     display: flex;
+    transition: all ease 2s;
+}
+
+.navbar.green .navbar-icons li span svg path,
+.navbar.green .navbar-icons li a svg path {
+    transition: all ease .3s;
+}
+
+.navbar.green .navbar-icons li span svg path,
+.navbar.green .navbar-icons li a svg path {
+    stroke: var(--item-bg2);
+}
+
+.navbar.green:hover .navbar-icons li span svg path,
+.navbar.green:hover .navbar-icons li a svg path {
+    stroke: var(--brand-color);
 }
 
 /* navbar-dropdown css start */
@@ -377,7 +431,7 @@
     z-index: 999;
 }
 
-.navbar-megamenu-content .container{
+.navbar-megamenu-content .container {
     position: unset;
 }
 

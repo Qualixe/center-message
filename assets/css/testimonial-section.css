@@ -23,6 +23,7 @@
 .swiper.testimonial-slider .swiper-slide {
     height: auto;
     width: 420px;
+    user-select: none;
 }
 
 .testimonial-item {

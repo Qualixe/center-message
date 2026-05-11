@@ -5,10 +5,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--item-bg5);
-    transition: all ease .3s;
+    transition: all ease 2s;
 }
 
-.hero-slider-section.green{
+.hero-slider-section.green {
     background-color: var(--brand-color);
 }
 
@@ -16,7 +16,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 144px 0 54px;
+    padding: 152px 0 60px;
+    position: relative;
 }
 
 .hero-content {
@@ -26,36 +27,35 @@
     align-items: center;
     flex-direction: column;
     gap: 96px;
-    transition: all ease .3s;
+    transition: all ease 2s;
+    transform: scale(1);
 }
 
-.hero-slider-section .hero-green-content{
-    transform: scale(0);
-    opacity: 0;
-    visibility: hidden;
+.hero-slider-section.green .hero-content {
+    transform: scale(1.25) translateY(22%);
 }
 
-.hero-slider-section.green .hero-green-content {
+.hero-slider-section .hero-content .content {
     transform: scale(1);
     opacity: 1;
     visibility: visible;
+    transition: all ease 2s;
 }
 
-.hero-slider-section.green .hero-regular-content{
-    transform: scale(0);
+.hero-slider-section.green .hero-content .content {
+    transform: scale(1.25);
     opacity: 0;
     visibility: hidden;
-}
-
-.hero-slider-section .hero-regular-content{
-    transform: scale(1);
-    opacity: 1;
-    visibility: visible;
 }
 
 .hero-content .title {
     font-size: 96px;
     line-height: 100%;
+    transition: all ease 1s;
+}
+
+.hero-slider-section.green .hero-content .title{
+    color: var(--item-bg2);
 }
 
 .hero-content .subtitle {
