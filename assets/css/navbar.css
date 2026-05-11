@@ -17,17 +17,17 @@
     transition: all ease .3s;
 }
 
-.navbar.green:hover {
+/* .navbar.green:hover {
     background: var(--item-bg5);
-}
+} */
 
 .navbar.green .navbar-link-title {
     color: var(--item-bg2);
 }
 
-.navbar.green:hover .navbar-link-title {
+/* .navbar.green:hover .navbar-link-title {
     color: var(--item-bg);
-}
+} */
 
 .navbar.nav-fixed {
     top: 0;
@@ -124,13 +124,13 @@
     display: none;
 }
 
-.navbar.green:hover .navbar-brand2 {
+/* .navbar.green:hover .navbar-brand2 {
     display: none;
 }
 
 .navbar.green:hover .navbar-brand {
     display: block;
-}
+} */
 
 .navbar-logo {
     height: 100%;
@@ -260,10 +260,10 @@
     stroke: var(--item-bg2);
 }
 
-.navbar.green:hover .navbar-icons li span svg path,
+/* .navbar.green:hover .navbar-icons li span svg path,
 .navbar.green:hover .navbar-icons li a svg path {
     stroke: var(--brand-color);
-}
+} */
 
 /* navbar-dropdown css start */
 .dropdown-nav-link-text .icon svg {

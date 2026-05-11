@@ -1,4 +1,13 @@
 /* hero section css start */
+/* .hero-slider-section {
+    background-image: url("../images/hero-bg.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--item-bg5);
+    transition: all ease 2s;
+} */
+
 .hero-slider-section {
     background-image: url("../images/hero-bg.png");
     background-position: top center;
@@ -6,6 +15,14 @@
     background-size: cover;
     background-color: var(--item-bg5);
     transition: all ease 2s;
+    height: calc(100dvh - 96px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-slider-section .container{
+    width: 100%;
 }
 
 .hero-slider-section.green {
@@ -17,10 +34,7 @@
     justify-content: center;
     align-items: center;
     padding: 152px 0 60px;
-<<<<<<< HEAD
     position: relative;
-=======
->>>>>>> 0344bfaebe7cb2f096dd570107d4dd81e5b040f3
 }
 
 .hero-content {

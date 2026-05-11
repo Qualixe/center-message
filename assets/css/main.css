@@ -357,6 +357,25 @@ button:disabled.secondary-btn {
 
 /* button css end */
 
+/* hero-animation-btn css start */
+.hero-animation-btn {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    display: none;
+}
+
+.hero-animation-btn.active {
+    display: block;
+}
+
+/* hero-animation-btn css end */
+
 /* section heading css start */
 .section-heading-wrapper {
     margin-bottom: 30px;

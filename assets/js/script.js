@@ -99,10 +99,12 @@ $(document).ready(function () {
   // navbar js end ---
 
   // hero-animation js start---
-  $(".hero-slider-section").click(function (event) {
+  $(".hero-animation-btn").click(function (event) {
     event.stopPropagation();
-    $(this).removeClass("green");
+    $(this).removeClass("active");
+    $("body").removeClass("active");
     $(".navbar").removeClass("green");
+    $(".hero-slider-section").removeClass("green");
   });
   // hero-animation js end---
 
