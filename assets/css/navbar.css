@@ -527,7 +527,7 @@
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.5);
     height: 100vh;
-    z-index: 9999;
+    z-index: 99999;
     transition: 300ms;
     opacity: 0;
     visibility: hidden;
