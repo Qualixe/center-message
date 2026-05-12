@@ -13,6 +13,7 @@
     overflow: hidden;
 }
 
+.navbar-megamenu-content::before,
 .navbar::before {
     position: absolute;
     content: "";
@@ -24,6 +25,7 @@
     z-index: 1;
 }
 
+.navbar-megamenu-content::after,
 .navbar::after {
     position: absolute;
     content: "";
@@ -624,10 +626,12 @@
 
     /* navbar css start */
 
+    .navbar-megamenu-content::before,
     .navbar::before {
         left: 10px;
     }
 
+    .navbar-megamenu-content::after,
     .navbar::after {
         right: 10px;
     }
@@ -727,7 +731,7 @@
 
     .navbar-link-title {
         justify-content: space-between;
-        padding: 10px 20px;
+        padding: 10px 16px;
         width: 100%;
         transition: none;
         height: auto;
@@ -771,6 +775,14 @@
         opacity: 1;
         visibility: visible;
         transition: unset;
+    }
+
+    .navbar-megamenu-content::before {
+        display: none;
+    }
+
+    .navbar-megamenu-content::after {
+        display: none;
     }
 
     .navbar-megamenu-content-items {
