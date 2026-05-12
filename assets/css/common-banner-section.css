@@ -1,0 +1,43 @@
+/* common-banner-section css start */
+.common-banner-section {
+    padding: 48px 0 24px;
+}
+
+.common-banner-content {
+    max-width: 1248px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.common-banner-content .title {
+    font-size: 64px;
+    line-height: 100%;
+    text-align: center;
+    padding: 0 0 16px 0;
+}
+
+.common-banner-content .text {
+    font-size: 20px;
+    line-height: 100%;
+    margin: 8px 0 0 0;
+}
+
+.common-banner-content .text a {
+    color: var(--paragraph-text-color);
+    text-decoration: underline;
+}
+
+.common-banner-content .mark-text {
+    margin: 24px 0 0 0;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    color: var(--item-bg);
+}
+
+.common-banner-content .mark-text a {
+    text-decoration: underline;
+    color: var(--item-bg);
+}
+
+/* common-banner-section css end */

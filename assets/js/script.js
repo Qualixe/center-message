@@ -1,14 +1,30 @@
 $(document).ready(function () {
   "use strict";
-  // navbar js start ---
-  $(window).on("load scroll", function () {
-    var scrolling = $(this).scrollTop();
-    if (scrolling > 10) {
-      $(".navbar").addClass("nav-fixed");
+  let lastScroll = 0;
+
+  window.addEventListener("load", handleScroll);
+  window.addEventListener("scroll", handleScroll);
+
+  function handleScroll() {
+    const scrolling = window.scrollY;
+    const navbar = document.querySelector(".navbar");
+
+    if (scrolling > 1) {
+      navbar.classList.add("nav-fixed");
     } else {
-      $(".navbar").removeClass("nav-fixed");
+      navbar.classList.remove("nav-fixed", "nav-hidden");
     }
-  });
+
+    if (scrolling > lastScroll && scrolling > 80) {
+      // scrolling down — hide header
+      navbar.classList.add("nav-hidden");
+    } else if (scrolling < lastScroll) {
+      // scrolling up — show header
+      navbar.classList.remove("nav-hidden");
+    }
+
+    lastScroll = scrolling;
+  }
 
   $(".ham-menu").click(function (event) {
     event.stopPropagation();
@@ -98,14 +114,36 @@ $(document).ready(function () {
 
   // navbar js end ---
 
-  // hero-animation js start---
-  $(".hero-animation-btn").click(function (event) {
-    event.stopPropagation();
-    $(".hero-animation-btn").removeClass("active");
-    $("body").removeClass("active");
+  if (localStorage.getItem("has-animation-seen")) {
+    // returning visitor — no animation
+  } else {
+    // first visit — show animation state
+    $(".hero-animation-btn").addClass("active");
+    $(".navbar").addClass("green hover-green");
+    $(".hero-slider-section").addClass("green");
+
+    // remove animation on first real user scroll
+    window.addEventListener(
+      "scroll",
+      function dismissHero() {
+        $(".hero-animation-btn").removeClass("active");
+        $(".navbar").removeClass("green hover-green");
+        $(".hero-slider-section").removeClass("green");
+        localStorage.setItem("has-animation-seen", "true");
+        window.removeEventListener("scroll", dismissHero);
+      },
+      { passive: true }
+    );
+  }
+
+  $(".navbar.hover-green .navbar-link").on("mouseenter", function () {
     $(".navbar").removeClass("green");
-    $(".navbar").removeClass("hover-green");
-    $(".hero-slider-section").removeClass("green");
+  });
+
+  $(".navbar .navbar-link").on("mouseleave", function () {
+    if ($(".navbar").hasClass("hover-green")) {
+      $(".navbar").addClass("green");
+    }
   });
 
   $(".navbar.hover-green .navbar-link").mouseenter(function (event) {

@@ -158,10 +158,13 @@
 
 .faq-link-wrap-item-content-inner .faq-link-wrap-btn .secondary-btn {
     background-color: var(--disabled-btn-bg2);
+    padding: 8px 24.5px;
+    font-size: 14px;
 }
 
 .faq-link-wrap-item-content-inner .faq-link-wrap-btn .secondary-btn:hover {
     background-color: var(--btn-hover2);
+    font-weight: 700;
 }
 
 /* faq section css end */

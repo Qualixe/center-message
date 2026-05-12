@@ -15,7 +15,6 @@
     background-size: cover;
     background-color: var(--item-bg5);
     transition: all ease 2s;
-    height: calc(100dvh - 96px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,14 +26,14 @@
 }
 
 .hero-slider-section.green {
-    background-color: var(--brand-color);
+    background-color: var(--item-bg6);
 }
 
 .hero-content-inner {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 152px 0 60px;
+    padding: 144px 0 54px;
     position: relative;
 }
 
@@ -68,7 +67,7 @@
 
 .hero-content .title {
     font-size: 96px;
-    line-height: 100%;
+    line-height: 108%;
     transition: all ease 1s;
 }
 

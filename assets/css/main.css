@@ -62,6 +62,7 @@
     --item-bg3: #BBD16D;
     --item-bg4: #FF9B42;
     --item-bg5: #F4F7D9;
+    --item-bg6: #2E542C;
     --section-bg: rgb(46 49 146 / 5%);
     --card-bg: #f7f7f7;
     --card-badge-bg: #f20000;
@@ -99,6 +100,7 @@ body {
     background: var(--body-color);
     transition: all ease 2s;
     margin: 96px 0 0 0;
+    position: relative;
     -webkit-transition: all ease 2s;
     -moz-transition: all ease 2s;
     -ms-transition: all ease 2s;
@@ -112,6 +114,28 @@ body.active {
     -moz-transition: all ease 2s;
     -ms-transition: all ease 2s;
     -o-transition: all ease 2s;
+}
+
+body::before {
+    position: absolute;
+    content: "";
+    left: 24px;
+    top: -96px;
+    width: 1px;
+    height: calc(100% + 96px);
+    background: var(--border-color);
+    z-index: 9999;
+}
+
+body::after {
+    position: absolute;
+    content: "";
+    right: 24px;
+    top: -96px;
+    width: 1px;
+    height: calc(100% + 96px);
+    background: var(--border-color);
+    z-index: 9999;
 }
 
 ul,
@@ -155,7 +179,7 @@ p {
     position: relative;
 }
 
-.container::before {
+/* .container::before {
     position: absolute;
     content: "";
     left: 0;
@@ -164,7 +188,7 @@ p {
     width: 1px;
     height: 4000%;
     background: var(--border-color);
-    z-index: 99;
+    z-index: 999;
 }
 
 .container::after {
@@ -176,8 +200,8 @@ p {
     width: 1px;
     height: 4000%;
     background: var(--border-color);
-    z-index: 99;
-}
+    z-index: 999;
+} */
 
 .section {
     padding: 60px 0;
@@ -821,6 +845,25 @@ button:disabled.secondary-btn {
 /* side-cart-product-content css end */
 /* cart-sidebar css end */
 
+@media only screen and (max-width: 1384px) {
+
+    /* common css start */
+    /* .container {
+        padding: 0 10px;
+        margin: 0 10px;
+    } */
+
+    body::before {
+        left: 10px;
+    }
+
+    body::after {
+        right: 10px;
+    }
+
+    /* common css end */
+}
+
 @media only screen and (max-width: 992px) {
 
     /* common css start */
@@ -834,6 +877,18 @@ button:disabled.secondary-btn {
 
     body {
         margin: 65px 0 0 0;
+    }
+
+    body::before {
+        left: 10px;
+        top: -65px;
+        height: calc(100% + 65px);
+    }
+
+    body::after {
+        right: 10px;
+        top: -65px;
+        height: calc(100% + 65px);
     }
 
     /* common css end */
@@ -868,8 +923,16 @@ button:disabled.secondary-btn {
 
     /* common css start */
     .container {
-        padding: 0 8px;
-        margin: 0 8px;
+        padding: 0 16px;
+        /* margin: 0 8px; */
+    }
+
+    body::before {
+        left: 8px;
+    }
+
+    body::after {
+        right: 8px;
     }
 
     .section {

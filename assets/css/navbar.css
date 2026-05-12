@@ -10,29 +10,25 @@
     z-index: 999;
     border-bottom: 1px solid var(--border-color);
     height: 96px;
+    overflow: hidden;
 }
 
 .navbar.green {
-    background: var(--brand-color);
+    background: var(--item-bg6);
     transition: all ease .3s;
 }
 
-/* -- */
-/* .navbar.green:hover {
-    background: var(--item-bg5);
-} */
-/* -- */
 .navbar.green .navbar-link-title {
     color: var(--item-bg2);
 }
 
-/* -- */
-/* .navbar.green:hover .navbar-link-title {
-    color: var(--item-bg);
-} */
-/* -- */
+.navbar.nav-hidden {
+    transform: translateY(-100%);
+    transition: all 0.7s ease;
+}
+
 .navbar.nav-fixed {
-    top: 0;
+    transition: all 0.7s ease;
 }
 
 .navbar .container {
@@ -126,16 +122,6 @@
     display: none;
 }
 
-/* --- */
-/* .navbar.green:hover .navbar-brand2 {
-    display: none;
-} */
-
-/* .navbar.green:hover .navbar-brand {
-    display: block;
-} */
-/* --- */
-
 .navbar-logo {
     height: 100%;
     display: flex;
@@ -215,7 +201,7 @@
 }
 
 .navbar-link:hover .navbar-link-title {
-    color: var(--brand-color);
+    color: var(--item-bg6);
 }
 
 .navbar-link-title .icon {
@@ -268,11 +254,6 @@
 .navbar.green .navbar-icons li a svg path {
     stroke: var(--item-bg2);
 }
-
-/* .navbar.green:hover .navbar-icons li span svg path,
-.navbar.green:hover .navbar-icons li a svg path {
-    stroke: var(--brand-color);
-} */
 
 /* navbar-dropdown css start */
 .dropdown-nav-link-text .icon svg {
@@ -432,9 +413,6 @@
     opacity: 0;
     visibility: hidden;
     background-color: var(--item-bg5);
-    /* max-height: 70dvh;
-    overflow-y: auto;
-    scrollbar-width: thin; */
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
     z-index: 999;
@@ -487,7 +465,6 @@
 }
 
 /* navbar-megamenu css end */
-
 
 .side-cart-btn {
     position: relative;
