@@ -179,38 +179,8 @@ p {
     position: relative;
 }
 
-/* .container::before {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1px;
-    height: 4000%;
-    background: var(--border-color);
-    z-index: 999;
-}
-
-.container::after {
-    position: absolute;
-    content: "";
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1px;
-    height: 4000%;
-    background: var(--border-color);
-    z-index: 999;
-} */
-
 .section {
     padding: 60px 0;
-}
-
-
-section,
-.section {
-    overflow: hidden;
 }
 
 .pt-0 {
@@ -848,11 +818,6 @@ button:disabled.secondary-btn {
 @media only screen and (max-width: 1384px) {
 
     /* common css start */
-    /* .container {
-        padding: 0 10px;
-        margin: 0 10px;
-    } */
-
     body::before {
         left: 10px;
     }
@@ -924,7 +889,6 @@ button:disabled.secondary-btn {
     /* common css start */
     .container {
         padding: 0 16px;
-        /* margin: 0 8px; */
     }
 
     body::before {

@@ -42,6 +42,7 @@
     justify-content: space-between;
     border-radius: 8px;
     overflow: hidden;
+    transition: all ease .3s;
 }
 
 .blog-item:last-child {
@@ -69,6 +70,10 @@
     justify-content: center;
     flex-direction: column;
     gap: 16px;
+}
+
+.blog-item:last-child:hover {
+    border-color: var(--item-bg2);
 }
 
 .blog-item:last-child:hover .content {
@@ -116,6 +121,23 @@
     position: relative;
 }
 
+.blog-item .img .hover-img {
+    position: absolute;
+    transition: all ease .3s;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.blog-item:hover .img .hover-img {
+    opacity: 1;
+    visibility: visible;
+}
+
 .blog-item .img .overlay {
     position: absolute;
     top: 0;
@@ -130,6 +152,7 @@
     opacity: 0;
     visibility: hidden;
     transition: all ease .3s;
+    z-index: 2;
 }
 
 .blog-item:hover .img .overlay {

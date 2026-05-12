@@ -18,6 +18,7 @@
 .swiper.testimonial-slider {
     height: auto;
     padding: 0 20px;
+    z-index: 99999;
 }
 
 .swiper.testimonial-slider::before {
