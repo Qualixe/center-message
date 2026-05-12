@@ -39,9 +39,10 @@
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
-    height: 1px;
+    height: 0.1px;
     z-index: -1;
     background: var(--border-color);
+    overflow: hidden;
 }
 
 .newsletter-field .icon {
