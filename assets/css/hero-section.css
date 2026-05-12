@@ -1,13 +1,4 @@
 /* hero section css start */
-/* .hero-slider-section {
-    background-image: url("../images/hero-bg.png");
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: var(--item-bg5);
-    transition: all ease 2s;
-} */
-
 .hero-slider-section {
     background-image: url("../images/hero-bg.png");
     background-position: top center;
@@ -19,6 +10,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
 }
 
 .hero-slider-section .container {
