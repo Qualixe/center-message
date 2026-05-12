@@ -124,7 +124,7 @@ body::before {
     width: 1px;
     height: calc(100% + 96px);
     background: var(--border-color);
-    z-index: 9999;
+    z-index: 999;
 }
 
 body::after {
@@ -135,7 +135,7 @@ body::after {
     width: 1px;
     height: calc(100% + 96px);
     background: var(--border-color);
-    z-index: 9999;
+    z-index: 999;
 }
 
 ul,
@@ -845,13 +845,11 @@ button:disabled.secondary-btn {
     }
 
     body::before {
-        left: 10px;
         top: -65px;
         height: calc(100% + 65px);
     }
 
     body::after {
-        right: 10px;
         top: -65px;
         height: calc(100% + 65px);
     }

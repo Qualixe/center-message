@@ -7,10 +7,32 @@
     right: 0;
     transition: ease 2s;
     width: 100%;
-    z-index: 999;
+    z-index: 99999;
     border-bottom: 1px solid var(--border-color);
     height: 96px;
     overflow: hidden;
+}
+
+.navbar::before {
+    position: absolute;
+    content: "";
+    left: 24px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: var(--border-color);
+    z-index: 1;
+}
+
+.navbar::after {
+    position: absolute;
+    content: "";
+    right: 24px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: var(--border-color);
+    z-index: 1;
 }
 
 .navbar.green {
@@ -590,20 +612,29 @@
 /* search-bar css end */
 @media only screen and (max-width: 1480px) {
 
-    /* navbar css end */
+    /* navbar css start */
     .navbar-wrapper {
         gap: 24px;
     }
 
-    /* navbar-img-link-content css start */
-    .navbar-img-link-content-left .navbar-img-link-content-left-item {
-        min-width: 165px;
+    /* navbar css end */
+}
+
+@media only screen and (max-width: 1384px) {
+
+    /* navbar css start */
+
+    .navbar::before {
+        left: 10px;
     }
 
-    /* navbar-img-link-content css end */
+    .navbar::after {
+        right: 10px;
+    }
 
     /* navbar css end */
 }
+
 
 @media only screen and (max-width: 992px) {
 
@@ -840,6 +871,14 @@
 @media only screen and (max-width: 575px) {
 
     /* navbar css end */
+    .navbar::before {
+        left: 8px;
+    }
+
+    .navbar::after {
+        right: 8px;
+    }
+
     .navbar-search-bar {
         max-width: calc(100% - 70px);
     }

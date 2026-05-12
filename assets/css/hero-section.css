@@ -102,11 +102,6 @@
 @media only screen and (max-width:992px) {
 
     /* hero section css start */
-    .hero-slider-section {
-        height: calc(100dvh - 65px);
-    }
-
-
     .hero-slider-section.green .hero-content .title {
         padding: 0 20px;
     }
