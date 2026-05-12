@@ -41,3 +41,34 @@
 }
 
 /* common-banner-section css end */
+
+@media only screen and (max-width:992px) {
+
+    /* common-banner-section css start */
+    .common-banner-content .title {
+        font-size: 44px;
+    }
+
+    /* common-banner-section css end */
+}
+
+@media only screen and (max-width:575px) {
+
+    /* common-banner-section css start */
+    .common-banner-content .title {
+        font-size: 28px;
+        padding: 0 0 8px 0;
+    }
+
+    .common-banner-content .text {
+        font-size: 16px;
+        line-height: 130%;
+    }
+
+    .common-banner-content .mark-text {
+        margin: 16px 0 0 0;
+        font-size: 14px;
+    }
+
+    /* common-banner-section css end */
+}

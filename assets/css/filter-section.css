@@ -1,0 +1,67 @@
+/* filter-section css start */
+.filter-section {
+    padding: 30px 0;
+}
+
+.filter-top {
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.filter-accordion-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.filter-accordion-item {
+    padding: 16px 24px;
+    text-align: center;
+    border-right: 1px solid var(--border-color);
+}
+
+.filter-accordion-item:last-child {
+    border-right: 0;
+}
+
+.filter-accordion-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.filter-accordion-heading .icon {
+    display: flex;
+    background: var(--item-bg3);
+    width: 24px;
+    height: 24px;
+    border-radius: 50px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-accordion-title {
+    font-family: var(--paragraph-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--brand-color);
+}
+
+.filter-accordion-content-wrap {
+    margin: 16px 0 0 0;
+}
+
+.filter-accordion-quantity,
+.filter-accordion-content-wrap .text {
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--item-bg);
+}
+
+.filter-accordion-quantity {
+    margin: 8px 0 0 0;
+}
+
+/* filter-section css end */
