@@ -181,12 +181,20 @@ $(document).ready(function () {
     event.stopPropagation();
     $(this).parent().toggleClass("active");
   });
+
+  $(window).on("click", function (event) {
+    $(".footer-select-field-heading").parent().removeClass("active");
+  });
   // footer-select-filed popup js end
 
   // filter-select-filed popup js start
   $(".filter-select-field-heading").click(function (event) {
     event.stopPropagation();
     $(this).parent().toggleClass("active");
+  });
+
+  $(window).on("click", function (event) {
+    $(".filter-select-field-heading").parent().removeClass("active");
   });
   // filter-select-filed popup js end
 });
@@ -249,15 +257,15 @@ const testimonialSlider = new Swiper(".testimonial-slider", {
 });
 
 // Pause on hover testimonial slider js
-// const marqueeTestimonial = document.querySelector(".testimonial-slider");
+const marqueeTestimonial = document.querySelector(".testimonial-slider");
 
-// marqueeTestimonial.addEventListener("mouseenter", () => {
-//   testimonialSlider.autoplay.stop();
-// });
+marqueeTestimonial.addEventListener("mouseenter", () => {
+  testimonialSlider.autoplay.stop();
+});
 
-// marqueeTestimonial.addEventListener("mouseleave", () => {
-//   testimonialSlider.autoplay.start();
-// });
+marqueeTestimonial.addEventListener("mouseleave", () => {
+  testimonialSlider.autoplay.start();
+});
 // testimonial-slider js end--
 
 // newsletter type js start---
@@ -275,51 +283,3 @@ newsletterField.forEach((section) => {
   });
 });
 // newsletter type js end---
-
-// filter-drop js start--
-// function DropDown(el) {
-//   this.dd = el;
-//   this.placeholder = this.dd.children(".filter-select-field-heading .title");
-//   this.opts = this.dd.find(".drop .filter-select-field");
-//   this.val = "";
-//   this.index = -1;
-//   this.initEvents();
-// }
-
-// DropDown.prototype = {
-//   initEvents: function () {
-//     var obj = this;
-//     obj.dd.on("click", function (e) {
-//       e.preventDefault();
-//       e.stopPropagation();
-//       $(this).toggleClass("active");
-//     });
-//     obj.opts
-//       .on("click", function () {
-//         var opt = $(this);
-//         obj.val = opt.text();
-//         obj.index = opt.index();
-//         obj.placeholder.text(obj.val);
-//         opt.siblings().removeClass("selected");
-//         opt.filter(':contains("' + obj.val + '")').addClass("selected");
-//       })
-//       .change();
-//   },
-//   getValue: function () {
-//     return this.val;
-//   },
-//   getIndex: function () {
-//     return this.index;
-//   },
-// };
-
-// $(function () {
-//   // create new variable for each menu
-//   var dd1 = new DropDown($("#noble-gases"));
-//   var dd2 = new DropDown($("#other-gases"));
-//   $(document).click(function () {
-//     // close menu on document click
-//     $(".wrap-drop").removeClass("active");
-//   });
-// });
-// filter-drop js end--
