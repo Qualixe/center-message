@@ -64,4 +64,138 @@
     margin: 8px 0 0 0;
 }
 
+.filter-btm {
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.filter-select-field-items,
+.filter-select-field-wrap {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.filter-clear .primary-btn {
+    padding: 4px 24.22px;
+    font-size: 14px;
+    background: var(--item-bg3);
+    color: var(--item-bg2);
+}
+
+.filter-select-field-item {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.filter-select-field-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.filter-select-field-heading .icon {
+    display: flex;
+}
+
+.filter-select-field-item .drop {
+    background: var(--item-bg5);
+    border: 1px solid var(--border-color);
+    /* left: 50%; */
+    right: 0;
+    opacity: 0;
+    position: absolute;
+    top: 170%;
+    transition: all ease .3s;
+    z-index: 1;
+    width: fit-content;
+    /* transform: translateX(-50%); */
+}
+
+.filter-select-field-item.active .drop {
+    opacity: 1;
+    top: 130%;
+}
+
+.filter-select-field {
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.filter-select-field:last-child {
+    border-bottom: 0;
+}
+
+.filter-select-field input {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) !important;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    user-select: none;
+}
+
+.filter-select-field label {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-appearance: none;
+    color: var(--paragraph-text-color);
+    font-size: 16px;
+    font-weight: 400;
+    text-wrap-mode: nowrap;
+    width: 100%;
+    padding: 8px 16px;
+    user-select: none;
+}
+
+.filter-select-field label .box {
+    background: var(--item-bg2);
+    display: block;
+    overflow: hidden;
+    width: 16px;
+    height: 16px;
+    position: relative;
+}
+
+.filter-radio-field label .box {
+    border-radius: 50px;
+}
+
+.filter-radio-field label .box::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50px;
+    background: var(--brand-color);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.filter-radio-field input[type="radio"]:checked~label .box::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.filter-radio-field input[type="radio"]:checked~label {
+    font-weight: 700;
+}
+
 /* filter-section css end */

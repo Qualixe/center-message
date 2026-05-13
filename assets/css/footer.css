@@ -94,26 +94,126 @@
     font-weight: 300;
 }
 
-.price-select-field {
+
+.footer-select-field-item {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.footer-select-field-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    background: var(--item-bg2);
+    padding: 10px 24px 8px;
+    border: 1px solid var(--brand-color);
+    border-radius: 8px;
+}
+
+.footer-select-field-heading .title {
+    color: var(--brand-color);
+    line-height: 1;
+}
+
+.footer-select-field-heading .icon {
+    display: flex;
+}
+
+.footer-select-field-item .drop {
+    background: var(--item-bg5);
+    border: 1px solid var(--border-color);
+    right: 0;
+    opacity: 0;
+    position: absolute;
+    bottom: 170%;
+    transition: all ease .3s;
+    z-index: 1;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.footer-select-field-item.active .drop {
+    opacity: 1;
+    bottom: 140%;
+}
+
+.footer-select-field {
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
     position: relative;
 }
 
-.copyright-field select {
-    padding: 0 42px 0 24px;
-    height: 36px;
-    background: var(--item-bg2);
-    border-radius: 8px;
-    overflow: hidden;
-    min-width: 150px;
+.footer-select-field:last-child {
+    border-bottom: 0;
 }
 
-.copyright-field .icon {
+.footer-select-field input {
     position: absolute;
+    left: 50%;
     top: 50%;
-    right: 24px;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%) !important;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    user-select: none;
+}
+
+.footer-select-field label {
     display: flex;
-    /* z-index: -1; */
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-appearance: none;
+    color: var(--paragraph-text-color);
+    font-size: 16px;
+    font-weight: 400;
+    text-wrap-mode: nowrap;
+    width: 100%;
+    padding: 8px 16px;
+    user-select: none;
+}
+
+.footer-select-field label .box {
+    background: var(--item-bg2);
+    display: block;
+    overflow: hidden;
+    width: 16px;
+    height: 16px;
+    position: relative;
+}
+
+.footer-radio-field label .box {
+    border-radius: 50px;
+}
+
+.footer-radio-field label .box::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50px;
+    background: var(--brand-color);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.footer-radio-field input[type="radio"]:checked~label .box::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.footer-radio-field input[type="radio"]:checked~label {
+    font-weight: 700;
 }
 
 /* footer-section css end */

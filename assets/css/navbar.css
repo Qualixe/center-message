@@ -215,7 +215,7 @@
     justify-content: center;
     gap: 8px;
     padding: 34.5px 0;
-    color: var(--item-bg);
+    color: var(--paragraph-text-color);
     font-size: 20px;
     font-weight: 400;
     transition: all ease .3s;
@@ -226,6 +226,10 @@
 
 .navbar-link:hover .navbar-link-title {
     color: var(--item-bg6);
+}
+
+.navbar-link.active .navbar-link-title {
+    color: var(--item-bg);
 }
 
 .navbar-link-title .icon {
